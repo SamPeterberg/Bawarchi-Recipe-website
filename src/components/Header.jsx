@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Signin from "./auth/Signin";
+import Signin from "./pages/auth/Signin";
 
 const Header = () => {
   return (
@@ -21,9 +21,13 @@ const Header = () => {
             </Link>
           </a>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center hover:cursor-pointer text-gray-500 font-bold  hover:border-black">
-            <a className="mr-5  hover:text-gray-900 ">All Recipes</a>
+            <Link to={"AllRecipes"}>
+              <h2 className="mr-5  hover:text-gray-900 ">All Recipes</h2>
+            </Link>
             <a className="mr-5 hover:text-gray-900">Second Link</a>
-            <a className="mr-5 hover:text-gray-900">Third Link</a>
+            <Link to={"About"}>
+              <h2 className="mr-5 hover:text-gray-900">About Us</h2>
+            </Link>
             <a className="mr-5 hover:text-gray-900">Fourth Link</a>
           </nav>
           <div className="flex gap-4">
